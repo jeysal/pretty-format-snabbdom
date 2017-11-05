@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`avoids overwriting data with data.props 1`] = `
+<div
+  asdf={42}
+  props={
+    Object {
+      "asdf": 1337,
+    }
+  }
+/>
+`;
+
+exports[`does not interfere with serialization of other values 1`] = `1`;
+
+exports[`does not interfere with serialization of other values 2`] = `true`;
+
+exports[`does not interfere with serialization of other values 3`] = `"asdf"`;
+
+exports[`does not interfere with serialization of other values 4`] = `Object {}`;
+
+exports[`does not interfere with serialization of other values 5`] = `
+Object {
+  "a": "a",
+  "b": 42,
+}
+`;
+
+exports[`does not interfere with serialization of other values 6`] = `
+Array [
+  1,
+  2,
+  "3",
+  "4",
+]
+`;
+
+exports[`ignores an empty node 1`] = `
+Object {
+  "children": undefined,
+  "data": Object {},
+  "elm": undefined,
+  "key": undefined,
+  "sel": "",
+  "text": undefined,
+}
+`;
+
+exports[`renders a selector like a tag name 1`] = `<div.cl#id />`;
+
+exports[`respects maxDepth 1`] = `
+<div>
+  <div>
+    <div>
+      <div … />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`serializes a JSX node and its props 1`] = `
+<div
+  style="color: black;"
+  data={
+    Object {
+      "stuff": "stuff",
+    }
+  }
+  id="id"
+  className="cl"
+  title="title"
+  onclick={[Function]}
+/>
+`;
+
+exports[`serializes a JSX node with children 1`] = `
+<div>
+  <div>
+    <div>
+      asdf
+    </div>
+  </div>
+</div>
+`;
+
+exports[`serializes a simple JSX node 1`] = `<div />`;
+
+exports[`serializes a simple node 1`] = `<div />`;
+
+exports[`serializes weird text nodes 1`] = `
+<div>
+  false
+  42.1337
+  [Function]
+</div>
+`;

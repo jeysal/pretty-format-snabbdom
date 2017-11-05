@@ -1,0 +1,69 @@
+{
+  "private": true,
+  "name": "pretty-format-snabbdom",
+  "version": "0.1.0",
+  "description": "pretty-format (Jest snapshot) plugin for snabbdom VNodes",
+  "keywords": [
+    "pretty-format",
+    "jest",
+    "snabbdom",
+    "snapshot",
+    "plugin"
+  ],
+  "main": "index.js",
+  "author": {
+    "name": "Tim Seckinger",
+    "email": "seckinger.tim@gmail.com",
+    "url": "https://github.com/jeysal"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeysal/pretty-format-snabbdom"
+  },
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf coverage dist",
+    "check": "run-p lint typecheck test",
+    "lint": "eslint src test",
+    "typecheck": "flow check",
+    "test": "jest --coverage",
+    "watchtest": "jest --coverage --watchAll",
+    "servecov": "live-server coverage/lcov-report --port=1717 -q",
+    "t": "run-p --race watchtest servecov",
+    "build": "babel src -d dist --ignore '**/*.test.js?(x)'",
+    "postbuild": "run-p copymeta copyflow",
+    "copymeta": "cp package.json LICENSE README.* dist",
+    "copyflow": "flow-copy-source src dist --ignore '**/*.test.js?(x)'",
+    "prefix": "prettier --single-quote --trailing-comma all --write '{src,test}/**/*.js?(x)'",
+    "fix": "eslint src --fix"
+  },
+  "dependencies": {
+    "pretty-format": "^21.2.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.1",
+    "babel-jest": "^21.2.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "copyfiles": "^1.2.0",
+    "eslint": "^4.3.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-flowtype": "^2.33.0",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-prettier": "^2.1.1",
+    "flow-bin": "^0.57.3",
+    "flow-copy-source": "^1.1.0",
+    "flow-typed": "^2.1.2",
+    "jest": "^21.2.1",
+    "live-server": "^1.2.0",
+    "npm-run-all": "^4.0.2",
+    "prettier": "^1.3.1",
+    "rimraf": "^2.6.1",
+    "snabbdom": "^0.7.0",
+    "snabbdom-jsx": "^0.4.2"
+  }
+}

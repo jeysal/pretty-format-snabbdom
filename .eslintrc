@@ -1,0 +1,25 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["airbnb-base", "plugin:flowtype/recommended"],
+  "plugins": ["flowtype", "prettier"],
+  "env": {
+    "jest": true
+  },
+  "rules": {
+    "comma-dangle": ["error", "always-multiline"],
+    "arrow-parens": ["error", "as-needed"],
+    "wrap-iife": "off", // leave this to prettier
+    "function-paren-newline": "off", // leave this to prettier
+    "indent": "off", // leave this to prettier
+    "no-restricted-syntax": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "trailingComma": "all"
+      }
+    ],
+    "no-prototype-builtins": "off",
+    "no-confusing-arrow": "off"
+  }
+}
