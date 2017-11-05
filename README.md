@@ -1,5 +1,7 @@
 # pretty-format-snabbdom
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jeysal/pretty-format-snabbdom.svg)](https://greenkeeper.io/)
+
 > [pretty-format](https://github.com/facebook/jest/tree/master/packages/pretty-format)
 ([Jest](https://facebook.github.io/jest/) snapshot) plugin for
 [snabbdom](https://github.com/snabbdom/snabbdom) VNodes
