@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "pretty-format-snabbdom",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "pretty-format (Jest snapshot) plugin for snabbdom VNodes",
   "keywords": [
     "pretty-format",
