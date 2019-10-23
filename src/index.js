@@ -50,7 +50,7 @@ const elementChildren = (elem: VNode): (Object | string)[] =>
   (elem.children || []).map(
     // replace text nodes with plain strings for printChildren rendering
     child =>
-      typeof child === 'object' && child.text !== undefined
+      child && typeof child === 'object' && child.text !== undefined
         ? String(child.text)
         : child,
   );
