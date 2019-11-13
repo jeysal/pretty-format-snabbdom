@@ -113,3 +113,8 @@ test('does not interfere with serialization of other values', () => {
   expect({ a: 'a', b: 42 }).toMatchSnapshot();
   expect([1, 2, '3', '4']).toMatchSnapshot();
 });
+
+test('allows null and undefined children', () => {
+  expect(h('div', [undefined])).toMatchSnapshot();
+  expect(h('div', [null])).toMatchSnapshot();
+});

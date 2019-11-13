@@ -1,5 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`allows null and undefined children 1`] = `
+<div>
+  undefined
+</div>
+`;
+
+exports[`allows null and undefined children 2`] = `
+<div>
+  null
+</div>
+`;
+
 exports[`avoids overwriting data with data.props 1`] = `
 <div
   asdf={42}
