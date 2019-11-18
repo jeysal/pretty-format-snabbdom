@@ -49,10 +49,15 @@ const elementProps = (elem: VNode): Object => {
 const elementChildren = (elem: VNode): (Object | string)[] =>
   (elem.children || []).map(
     // replace text nodes with plain strings for printChildren rendering
-    child =>
-      child && typeof child === 'object' && child.text !== undefined
+    child => {
+      if (child === null || child === undefined) {
+        return '';
+      }
+
+      return typeof child === 'object' && child.text !== undefined
         ? String(child.text)
-        : child,
+        : child;
+    },
   );
 
 export const serialize = (
