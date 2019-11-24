@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "pretty-format-snabbdom",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "pretty-format (Jest snapshot) plugin for snabbdom VNodes",
   "keywords": [
     "pretty-format",
@@ -32,7 +32,7 @@
     "t": "run-p --race watchtest servecov",
     "build": "babel src -d dist --ignore '**/*.test.js?(x)'",
     "postbuild": "run-p copymeta copyflow",
-    "copymeta": "cp package.json LICENSE README.* dist",
+    "copymeta": "cp package.json LICENSE README.* CHANGELOG.md dist",
     "copyflow": "flow-copy-source src dist --ignore '**/*.test.js?(x)'",
     "prefix": "prettier --single-quote --trailing-comma all --write '{src,test}/**/*.js?(x)'",
     "fix": "eslint src --fix"
