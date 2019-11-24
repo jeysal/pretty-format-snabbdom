@@ -66,6 +66,16 @@ test('serializes weird text nodes', () => {
   ).toMatchSnapshot();
 });
 
+test('omits null and undefined children', () => {
+  expect(h('div', [null, undefined])).toMatchSnapshot();
+  expect(
+    <div>
+      {null}
+      {undefined}
+    </div>,
+  ).toMatchSnapshot();
+});
+
 test('avoids overwriting data with data.props', () => {
   expect(h('div', { asdf: 42, props: { asdf: 1337 } })).toMatchSnapshot();
 });

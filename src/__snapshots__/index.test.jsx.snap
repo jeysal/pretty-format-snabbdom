@@ -46,17 +46,13 @@ Object {
 }
 `;
 
+exports[`omits null and undefined children 1`] = `<div />`;
+
+exports[`omits null and undefined children 2`] = `<div />`;
+
 exports[`renders a selector like a tag name 1`] = `<div.cl#id />`;
 
-exports[`respects maxDepth 1`] = `
-<div>
-  <div>
-    <div>
-      <div … />
-    </div>
-  </div>
-</div>
-`;
+exports[`respects maxDepth 1`] = `<div />`;
 
 exports[`serializes a JSX node and its props 1`] = `
 <div
@@ -73,15 +69,7 @@ exports[`serializes a JSX node and its props 1`] = `
 />
 `;
 
-exports[`serializes a JSX node with children 1`] = `
-<div>
-  <div>
-    <div>
-      asdf
-    </div>
-  </div>
-</div>
-`;
+exports[`serializes a JSX node with children 1`] = `<div />`;
 
 exports[`serializes a simple JSX node 1`] = `<div />`;
 
@@ -91,6 +79,5 @@ exports[`serializes weird text nodes 1`] = `
 <div>
   false
   42.1337
-  [Function]
 </div>
 `;
